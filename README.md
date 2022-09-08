@@ -17,16 +17,37 @@ script was written.
 `quay.io/codefresh/committers-counter:master`
 
 
-### Command
+### Example Commands
 
 ```shell
+# with minimal config (from start to the end of this month)
+# result is printed to logs
 docker run \
   -e GIT_TOKEN=... \
-  -e GIT_REPOSITORIES=codefresh/cli,codefresh/cf-api \
+  -e GIT_REPOSITORIES=codefresh-io/argo-platform \
+  gcr.io/codefresh-inc/codefresh/committers-counter:master 
+  
+  
+# with dates
+# result is printed to logs
+docker run \
+  -e GIT_TOKEN=... \
+  -e GIT_REPOSITORIES=codefresh-io/argo-platform \
+  -e DATE_START=2022-05-08 \
+  -e DATE_END=2022-09-08 \
+  gcr.io/codefresh-inc/codefresh/committers-counter:master 
+  
+
+# with dates
+# result is printed to logs
+# and can be found in path /tmp/result.json
+docker run \
+  -e GIT_TOKEN=... \
+  -e GIT_REPOSITORIES=codefresh-io/cli,codefresh-io/cf-api \
   -e DATE_START=2022-05-08 \
   -e DATE_END=2022-09-08 \
   -v /tmp:/tmp \
-  quay.io/codefresh/committers-counter:master 
+  gcr.io/codefresh-inc/codefresh/committers-counter:master 
 ```
 
 ### Params (envs)
