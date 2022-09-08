@@ -57,3 +57,12 @@ steps:
           - ${{CF_BRANCH_TAG_NORMALIZED}}
           - ${{CF_REVISION}}
 
+      push_to_dockerhub:
+        title: "Pushing image to dockerhub"
+        type: push
+        registry: dockerhub
+        candidate: ${{build}}
+        tags:
+          - ${{CF_BRANCH_TAG_NORMALIZED}}
+          - ${{CF_REVISION}}
+
