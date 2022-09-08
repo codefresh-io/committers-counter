@@ -39,7 +39,7 @@ async function main() {
         data: [...AUTHORS],
     }
     const resultJson = JSON.stringify(result, null, '  ')
-    const resultPath = path.resolve('./result.json')
+    const resultPath = path.resolve('/tmp/result.json')
     fs.writeFileSync(resultPath, resultJson, 'utf-8')
     console.log()
     console.log('-----')
