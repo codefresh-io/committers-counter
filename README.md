@@ -11,7 +11,9 @@ script was written.
 ### Images
 
 `gcr.io/codefresh-inc/codefresh/committers-counter:master`
+
 `gcr.io/codefresh-enterprise/codefresh/committers-counter:master`
+
 `quay.io/codefresh/committers-counter:master`
 
 
