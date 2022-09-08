@@ -16,6 +16,8 @@ script was written.
 
 `quay.io/codefresh/committers-counter:master`
 
+`codefresh/committers-counter:master`
+
 
 ### Example Commands
 
